@@ -1,13 +1,15 @@
-import React from "react"
+import React, { FC } from "react"
 import s from "./styles.module.scss"
 import cn from "classnames"
 
-export type IProps = {
+export type Props = {
 
 }
 
-export default function __component__(pascalCase) (props: IProps) {
+export const __component__(pascalCase) :FC<Props> = (props) => {
     return (
         <div>Hello World</div>
     )
 }
+
+

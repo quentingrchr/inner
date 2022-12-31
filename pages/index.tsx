@@ -1,12 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Hero, PageLayout } from '@components'
 
 const Home: NextPage = () => {
-  return (<>
+  return (
+    <>
       <Head>
         <title> Simple title </title>
       </Head>
-      <h1>Hello world</h1>
+      <PageLayout>
+        <Hero />
+      </PageLayout>
     </>
   )
 }

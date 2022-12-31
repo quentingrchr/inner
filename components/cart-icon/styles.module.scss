@@ -1,0 +1,27 @@
+@import '@styles/theme.scss';
+
+// Your style here
+
+.container {
+  position: relative;
+  width: fit-content;
+}
+
+.badge {
+  position: absolute;
+  right: -25%;
+  top: -25%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: $font-secondary;
+  font-weight: bold;
+  color: $color-primary-700;
+  border-radius: 50%;
+  background-color: $color-primary-300;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid $color-primary-400;
+}

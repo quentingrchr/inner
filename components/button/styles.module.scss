@@ -1,0 +1,97 @@
+@import '@styles/theme.scss';
+
+// Your style here
+.container {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--color-bg, #{$color-primary-600});
+  color: var(--color-text, #{$color-primary-200});
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.dark {
+  --color-bg: #{$color-primary-600};
+  --color-text: #{$color-primary-200};
+  padding: 1.6rem 2.4rem;
+
+  &.primary {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary-500;
+      z-index: 1;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &.secondary {
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: $color-primary-500;
+    }
+  }
+}
+
+.light {
+  --color-bg: transparent;
+  --color-text: #{$color-primary-600};
+  padding: 1.6rem 0;
+
+  &.primary {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-text);
+    }
+    &::before {
+      opacity: 0.2;
+    }
+    &::after {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &.secondary {
+    padding: 1.6rem 2.4rem;
+    border: 1px solid var(--color-text);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: var(--color-text);
+      color: $color-primary-200;
+    }
+  }
+}

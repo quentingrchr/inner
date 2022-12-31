@@ -1,0 +1,29 @@
+@import '@styles/theme.scss';
+
+// Your style here
+
+.container {
+}
+
+.menu {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3.2rem var(--padding-page-x);
+  display: flex;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    flex: 1;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 4rem;
+  }
+}

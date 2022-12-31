@@ -1,0 +1,15 @@
+@import '@styles/theme.scss';
+
+// Your style here
+
+.pageLayout {
+  --color-bg: #{$color-primary-200};
+  --color-text: #{$color-primary-600};
+  --padding-page-x: 10vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

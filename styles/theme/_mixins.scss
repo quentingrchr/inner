@@ -1,5 +1,3 @@
-
-
 // Respond above.
 @mixin respond-above($breakpoint) {
   // If the breakpoint exists in the map.
@@ -34,5 +32,91 @@
   } @else {
     // Log a warning.
     @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+$fs-heading: (
+  'xxl': 3.8rem,
+  'xl': 3.2rem,
+  'lg': 2.4rem,
+  'md': 1.8rem,
+  'sm': 1.8rem,
+  'xs': 1.4rem,
+  'xxs': 1.2rem,
+);
+
+@mixin typo-page-title() {
+  font-size: 6.5vw;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin typo-heading($type: 'md') {
+  @if map-has-key($map: $fs-heading, $key: $type) {
+    font-size: map-get($fs-heading, $type);
+    font-family: $font-primary;
+    font-weight: 400;
+  } @else {
+    @warn 'Invalid heading type: #{$type}.';
+  }
+}
+
+@mixin typo-heading-large-xl {
+  font-size: 5.6rem;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin typo-heading-large-lg {
+  font-size: 5.12rem;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin typo-heading-large-md {
+  font-size: 4rem;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin typo-heading-sm {
+  font-size: 3.2rem;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin typo-quote {
+  font-size: 1.8rem;
+  font-family: $font-secondary;
+  font-weight: 300;
+}
+
+@mixin typo-link {
+  font-size: 1.4rem;
+  font-family: $font-secondary;
+  font-weight: 400;
+}
+
+@mixin typo-button {
+  font-size: 1rem;
+  font-family: $font-secondary;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+$fs-paragraph: (
+  'xl': 2rem,
+  'lg': 1.8rem,
+  'md': 1.6rem,
+  'sm': 1.4rem,
+);
+@mixin typo-paragraph($size: 'md') {
+  @if map-has-key($map: $fs-paragraph, $key: $size) {
+    font-size: map-get($fs-paragraph, $size);
+    font-family: $font-secondary;
+    font-weight: 300;
+  } @else {
+    @warn 'Invalid paragraph size: #{$size}.';
   }
 }
