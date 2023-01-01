@@ -1,10 +1,14 @@
-
 /* story for title component */
-import __component__(pascalCase), { Props } from './index'
-const meta = {
-  title: '__component__(pascalCase)',
+import { FC } from 'react'
+import { Story, ComponentMeta } from '@storybook/react'
+import { __component__(pascalCase), Props } from './index'
+export default {
+  title: 'Components/CartIcon',
   component: __component__(pascalCase),
-}
-export const Default = (props: Props) => <__component__(pascalCase) {...props } />
+  
+} as ComponentMeta<typeof __component__(pascalCase)>
 
-export default meta
+const Template: Story<Props> = (args: Props) => <__component__(pascalCase) {...args} />
+
+export const Default = Template.bind({})
+
