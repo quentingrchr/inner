@@ -17,7 +17,7 @@ function printQuantity(quantity: number): string {
 
 export const CartIcon: FC<Props> = ({ quantity = 0, onClick = () => {} }) => {
   return (
-    <div className={s.container} onClick={onClick}>
+    <div className={s.container} onClick={onClick} aria-label="Open cart">
       <AnimatePresence>
         {quantity > 0 && (
           <motion.span

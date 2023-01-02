@@ -1,0 +1,21 @@
+@import '@styles/theme.scss';
+
+// Your style here
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  gap: 1rem;
+  margin: 1rem 0;
+  border: 1px solid $color-primary-300;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}

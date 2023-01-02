@@ -1,10 +1,19 @@
-
 /* story for title component */
-import BurgerIcon, { Props } from './index'
-const meta = {
-  title: 'BurgerIcon',
+import { FC } from 'react'
+import { Story, ComponentMeta } from '@storybook/react'
+import { BurgerIcon, Props } from './index'
+export default {
+  title: 'Components/BurgerIcon',
   component: BurgerIcon,
-}
-export const Default = (props: Props) => <BurgerIcon {...props } />
+  argTypes: {
+    isOpen: {
+      control: 'boolean',
+    },
+    onClick: {
+      action: 'onClick action',
+    },
+  },
+} as ComponentMeta<typeof BurgerIcon>
 
-export default meta
+const Template: Story<Props> = (args: Props) => <BurgerIcon {...args} />
+export const Default = Template.bind({})

@@ -1,3 +1,4 @@
+@import 'vars';
 // Respond above.
 @mixin respond-above($breakpoint) {
   // If the breakpoint exists in the map.
@@ -111,6 +112,7 @@ $fs-paragraph: (
   'md': 1.6rem,
   'sm': 1.4rem,
 );
+
 @mixin typo-paragraph($size: 'md') {
   @if map-has-key($map: $fs-paragraph, $key: $size) {
     font-size: map-get($fs-paragraph, $size);
@@ -118,5 +120,13 @@ $fs-paragraph: (
     font-weight: 300;
   } @else {
     @warn 'Invalid paragraph size: #{$size}.';
+  }
+}
+
+@mixin z-index($z-index) {
+  @if map-has-key($map: $z-index-map, $key: $z-index) {
+    z-index: map-get($z-index-map, $z-index);
+  } @else {
+    @warn 'Invalid z-index: #{$z-index}.';
   }
 }

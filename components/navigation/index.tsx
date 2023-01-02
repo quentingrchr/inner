@@ -1,43 +1,30 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import s from './styles.module.scss'
-import { CartIcon, Icon } from '@components'
+import { BurgerIcon, CartIcon, Icon, NavigationMenu } from '@components'
 
 export type Props = {}
 
 export const Navigation: FC<Props> = (props) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
   return (
     <div className={s.container}>
       <header className={s.header}>
         <div className={s.header__left}>
-          <div className={s.logo}>
-            <Icon type="logo" size={90} />
-          </div>
+          <Icon type="logo" size={90} />
         </div>
         <ul className={s.header__right}>
           <li className={s.rightItem}>
             <CartIcon quantity={2} />
           </li>
-          <li className={s.rightItem}>Burger</li>
+          <li className={s.rightItem}>
+            <BurgerIcon
+              isOpen={menuIsOpen}
+              onClick={() => setMenuIsOpen(!menuIsOpen)}
+            />
+          </li>
         </ul>
       </header>
-      <nav className={s.menu}>
-        <div className={s.menuContent}>
-          <ul className={s.menuEntries}>
-            <li className={s.menuEntry}>Home</li>
-            <li className={s.menuEntry}>About</li>
-            <li className={s.menuEntry}>Contact</li>
-            <li className={s.menuEntry}>Shop</li>
-            <li className={s.menuEntry}>Blog</li>
-            <li className={s.menuEntry}>Service</li>
-          </ul>
-          <ul className={s.menuSocials}>
-            <li className={s.menuSocial}>Facebook</li>
-            <li className={s.menuSocial}>Twitter</li>
-            <li className={s.menuSocial}>Instagram</li>
-            <li className={s.menuSocial}>Pinterest</li>
-          </ul>
-        </div>
-      </nav>
+      <NavigationMenu isOpen={menuIsOpen} />
     </div>
   )
 }

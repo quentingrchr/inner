@@ -19,3 +19,10 @@ $breakpoints: (
   lg: 1200px,
   xl: 1600px,
 );
+
+$z-index-map: (
+  'header': 100,
+  'menu': 200,
+  'burger': 220,
+  'modal': 250,
+);

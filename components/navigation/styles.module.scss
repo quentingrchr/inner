@@ -15,6 +15,7 @@
   padding: 3.2rem var(--padding-page-x);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__left,
   &__right {
@@ -24,6 +25,8 @@
   &__right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     font-size: 4rem;
+    gap: 2.5rem;
   }
 }

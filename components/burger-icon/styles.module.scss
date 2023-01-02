@@ -1,3 +1,27 @@
-@import "@styles/theme.scss";
+@import '@styles/theme.scss';
 
 // Your style here
+
+.container {
+  position: relative;
+  width: 4.2rem;
+  height: 3.4rem;
+  @include z-index('burger');
+}
+
+.line1,
+.line2 {
+  background-color: $color-primary-700;
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  transform-origin: center;
+  transition: background-color 0.2s 0.8s ease-in-out;
+
+  &.open {
+    background-color: $color-primary-200;
+    transition: background-color 0.2s ease-in-out;
+  }
+}

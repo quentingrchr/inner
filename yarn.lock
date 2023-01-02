@@ -6377,7 +6377,7 @@ human-signals@^2.1.0:
 
 icomoon-react@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmjs.org/icomoon-react/-/icomoon-react-3.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/icomoon-react/-/icomoon-react-3.0.0.tgz#3b6d1b5458333489dd30c1de693d1b3d2e9177ac"
   integrity sha512-2zfOpjnFj83v7MoG2D2+g7bn+Ha4HnousvHyNUs7IZrjM/yjAsfBq6uxrFf7erTnEYscdXGieLv66ANgSnI1ag==
   dependencies:
     react ">=16.9.0"

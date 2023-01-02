@@ -10,5 +10,18 @@ import { Navigation } from './navigation'
 import { Icon } from './icon'
 import { CartIcon } from './cart-icon'
 import { BurgerIcon } from './burger-icon'
+import { NavigationMenu } from './navigation-menu'
+import { SocialIcon } from './social-icon'
 
-export { Typography, Hero, PageLayout, Button, Navigation, Icon, CartIcon }
+export {
+  Typography,
+  Hero,
+  PageLayout,
+  Button,
+  Navigation,
+  Icon,
+  CartIcon,
+  BurgerIcon,
+  NavigationMenu,
+  SocialIcon,
+}

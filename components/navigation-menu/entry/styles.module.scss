@@ -1,0 +1,28 @@
+@import '@styles/theme.scss';
+
+.entry {
+  font-size: 9.5rem;
+  font-family: $font-secondary;
+  font-weight: 600;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.5s opacity ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.number {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: flex;
+}
