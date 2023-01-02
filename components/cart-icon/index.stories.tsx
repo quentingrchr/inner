@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
 import { CartIcon, Props } from './index'
 export default {
-  title: 'Components/CartIcon',
+  title: 'Molecules/CartIcon',
   component: CartIcon,
   argTypes: {
     quantity: {
@@ -23,3 +23,6 @@ export default {
 const Template: Story<Props> = (args: Props) => <CartIcon {...args} />
 
 export const Default = Template.bind({})
+Default.parameters = {
+  layout: 'centered',
+}

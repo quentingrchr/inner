@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
 import { BurgerIcon, Props } from './index'
 export default {
-  title: 'Components/BurgerIcon',
+  title: 'Atoms/BurgerIcon',
   component: BurgerIcon,
   argTypes: {
     isOpen: {
@@ -17,3 +17,6 @@ export default {
 
 const Template: Story<Props> = (args: Props) => <BurgerIcon {...args} />
 export const Default = Template.bind({})
+Default.parameters = {
+  layout: 'centered',
+}

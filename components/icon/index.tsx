@@ -20,7 +20,7 @@ export type IconColor =
   | 'primary-300'
   | 'primary-200'
 
-export type Size = '2xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+export type Size = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 type Sizes = {
   [key in Size]: number
 }
@@ -41,7 +41,8 @@ const colors: { [key in IconColor]: string } = {
 
 const sizes: Sizes = {
   '2xs': 16,
-  'sm': 24,
+  'sm': 20,
+  'xs': 24,
   'md': 30,
   'lg': 36,
   'xl': 40,

@@ -12,6 +12,7 @@ export type Props = {
   variant: 'primary' | 'secondary'
   color: 'light' | 'dark'
   type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 function isExternal(url: string) {
@@ -40,12 +41,16 @@ export const Button: FC<Props> = ({
   type = 'button',
   color = 'dark',
   variant = 'primary',
+  disabled = false,
 }) => {
   if (onClick !== undefined) {
     return (
       <button
         onClick={onClick}
-        className={cn(s.container, s[variant], s[color])}
+        disabled={disabled}
+        className={cn(s.container, s[variant], s[color], {
+          [s.disabled]: disabled,
+        })}
         type={type}
       >
         <Content>{children}</Content>
@@ -54,13 +59,24 @@ export const Button: FC<Props> = ({
   } else if (to !== undefined) {
     if (isExternal(to)) {
       return (
-        <a href={to} className={cn(s.container, s[variant], s[color])}>
+        <a
+          href={to}
+          className={cn(s.container, s[variant], s[color], {
+            [s.disabled]: disabled,
+          })}
+        >
           <Content>{children}</Content>
         </a>
       )
     } else {
       return (
-        <Link href={to} className={cn(s.container, s[variant], s[color])}>
+        <Link
+          href={to}
+          disabled={disabled}
+          className={cn(s.container, s[variant], s[color], {
+            [s.disabled]: disabled,
+          })}
+        >
           <Content>{children}</Content>
         </Link>
       )
