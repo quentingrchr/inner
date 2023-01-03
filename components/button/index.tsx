@@ -11,7 +11,7 @@ export type Props = {
   to?: string
   variant: 'primary' | 'secondary'
   color: 'light' | 'dark'
-  type?: 'button' | 'submit' | 'reset'
+  type?: 'button' | 'submit' | 'reset' | 'link'
   disabled?: boolean
 }
 
@@ -72,7 +72,6 @@ export const Button: FC<Props> = ({
       return (
         <Link
           href={to}
-          disabled={disabled}
           className={cn(s.container, s[variant], s[color], {
             [s.disabled]: disabled,
           })}

@@ -51,3 +51,7 @@
 .button {
   @include typo-button();
 }
+
+.section-title {
+  @include typo-section-title();
+}

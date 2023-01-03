@@ -13,6 +13,7 @@ export enum TypographyName {
   LINK = 'link',
   QUOTE = 'quote',
   BUTTON = 'button',
+  SECTION_TITLE = 'section-title',
 }
 
 type TypographyTag =
@@ -50,12 +51,17 @@ type TypographyTypeButton = {
   name: TypographyName.BUTTON
 }
 
+type TypographyTypeSectionTitle = {
+  name: TypographyName.SECTION_TITLE
+}
+
 type TypographyType =
   | TypographyTypeHeading
   | TypographyTypeParagraph
   | TypographyTypeLink
   | TypographyTypeCaption
   | TypographyTypeButton
+  | TypographyTypeSectionTitle
 
 function hasSizeProperty(
   type: TypographyType

@@ -5,7 +5,7 @@ import { Icon, Props, IconType, Size } from './index'
 
 const sizeOptions: Size[] = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl']
 export default {
-  title: 'Molecules/BaseIcon',
+  title: 'Atoms/BaseIcon',
   component: Icon,
   argTypes: {
     size: {

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
 import { Button, Props } from './index'
 export default {
-  title: 'Atoms/Button',
+  title: 'Molecules/Button',
   component: Button,
   argTypes: {
     disabled: {
@@ -12,6 +12,12 @@ export default {
     },
     onClick: {
       action: 'onClick action',
+    },
+    type: {
+      defaultValue: 'button',
+    },
+    to: {
+      control: 'text',
     },
   },
 } as ComponentMeta<typeof Button>

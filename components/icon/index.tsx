@@ -28,6 +28,7 @@ export type Props = {
   type: IconType
   size?: Size | number
   color?: IconColor
+  style?: React.CSSProperties
 }
 
 const colors: { [key in IconColor]: string } = {
@@ -68,7 +69,12 @@ function getIcon(type: IconType): JSX.Element {
   }
 }
 
-export const Icon: FC<Props> = ({ type, size, color = 'primary-700' }) => {
+export const Icon: FC<Props> = ({
+  type,
+  size,
+  color = 'primary-700',
+  style,
+}) => {
   let computedSize
   if (typeof size === 'number') {
     computedSize = size
@@ -85,6 +91,7 @@ export const Icon: FC<Props> = ({ type, size, color = 'primary-700' }) => {
         color={colors[color]}
         size={computedSize}
         icon={type}
+        style={style}
       />
     </div>
   )

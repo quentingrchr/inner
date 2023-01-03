@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import s from './styles.module.scss'
 import cn from 'classnames'
 import { Entry } from './entry'
@@ -50,6 +50,15 @@ const dummyEntries: Entry[] = [
 ]
 
 export const NavigationMenu: FC<Props> = ({ isOpen = false }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.height = '100vh'
+    } else {
+      document.body.style.overflow = 'auto'
+      document.body.style.height = 'auto'
+    }
+  }, [isOpen])
   return (
     <motion.nav
       className={s.menu}
@@ -59,6 +68,9 @@ export const NavigationMenu: FC<Props> = ({ isOpen = false }) => {
       variants={{
         close: {
           height: 0,
+          transition: {
+            duration: 0.6,
+          },
         },
         open: {
           height: '100vh',

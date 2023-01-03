@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
 import { Typography, Props, TypographyName } from './index'
 export default {
-  title: 'Molecules/Typography',
+  title: 'Atoms/Typography',
   component: Typography,
 } as ComponentMeta<typeof Typography>
 
@@ -136,5 +136,15 @@ Button.args = {
   as: 'span',
 }
 Button.parameters = {
+  layout: 'centered',
+}
+
+export const SectionTitle = Template.bind({})
+SectionTitle.args = {
+  type: { name: TypographyName.SECTION_TITLE },
+  children: 'Section Title',
+  as: 'h2',
+}
+SectionTitle.parameters = {
   layout: 'centered',
 }

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 export type Props = {
   isOpen?: boolean
   onClick?: () => void
+  color?: 'light' | 'dark'
 }
 
 const variantLine1 = {
@@ -31,21 +32,22 @@ const variantLine2 = {
 export const BurgerIcon: FC<Props> = ({
   isOpen = false,
   onClick = () => {},
+  color = 'dark',
 }) => {
   return (
     <motion.div
-      className={s.container}
+      className={cn(s.container, s[color], { [s.open]: isOpen })}
       initial="closed"
       animate={isOpen ? 'open' : 'closed'}
       exit="closed"
       onClick={onClick}
     >
       <motion.span
-        className={cn(s.line1, { [s.open]: isOpen })}
+        className={cn(s.line1)}
         variants={variantLine1}
       ></motion.span>
       <motion.span
-        className={cn(s.line2, { [s.open]: isOpen })}
+        className={cn(s.line2)}
         variants={variantLine2}
       ></motion.span>
     </motion.div>

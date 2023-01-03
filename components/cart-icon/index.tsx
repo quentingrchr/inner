@@ -2,10 +2,12 @@ import React, { FC } from 'react'
 import s from './styles.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Icon } from '@components'
+import cn from 'classnames'
 
 export type Props = {
   quantity?: number
   onClick?: () => void
+  color?: 'light' | 'dark'
 }
 
 function printQuantity(quantity: number): string {
@@ -15,9 +17,17 @@ function printQuantity(quantity: number): string {
   return quantity.toString()
 }
 
-export const CartIcon: FC<Props> = ({ quantity = 0, onClick = () => {} }) => {
+export const CartIcon: FC<Props> = ({
+  quantity = 0,
+  onClick = () => {},
+  color = 'dark',
+}) => {
   return (
-    <div className={s.container} onClick={onClick} aria-label="Open cart">
+    <div
+      className={cn(s.container, s[color])}
+      onClick={onClick}
+      aria-label="Open cart"
+    >
       <AnimatePresence>
         {quantity > 0 && (
           <motion.span
@@ -39,7 +49,11 @@ export const CartIcon: FC<Props> = ({ quantity = 0, onClick = () => {} }) => {
           </motion.span>
         )}
       </AnimatePresence>
-      <Icon type="cart" size="md" />
+      <Icon
+        type="cart"
+        size="md"
+        color={color === 'dark' ? 'primary-700' : 'primary-300'}
+      />
     </div>
   )
 }

@@ -1,0 +1,7 @@
+@import '@styles/theme.scss';
+
+// Your style here
+.container {
+  margin-bottom: 2rem;
+  color: var(--color-text, #{$color-primary-700});
+}

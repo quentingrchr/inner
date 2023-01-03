@@ -12,6 +12,8 @@ import { CartIcon } from './cart-icon'
 import { BurgerIcon } from './burger-icon'
 import { NavigationMenu } from './navigation-menu'
 import { SocialIcon } from './social-icon'
+import { LogoIcon } from './logo-icon'
+import { SectionTitle } from './section-title'
 
 export {
   Typography,
@@ -24,4 +26,6 @@ export {
   BurgerIcon,
   NavigationMenu,
   SocialIcon,
+  LogoIcon,
+  SectionTitle,
 }

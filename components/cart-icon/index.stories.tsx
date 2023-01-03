@@ -6,13 +6,21 @@ export default {
   title: 'Molecules/CartIcon',
   component: CartIcon,
   argTypes: {
+    color: {
+      options: ['light', 'dark'],
+      control: {
+        type: 'radio',
+      },
+      defaultValue: 'dark',
+    },
     quantity: {
       control: {
         type: 'range',
         min: 0,
-        max: 105,
-        step: 5,
+        max: 150,
+        step: 50,
       },
+      defaultValue: 50,
     },
     onClick: {
       action: 'onClick action',

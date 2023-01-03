@@ -18,11 +18,12 @@ module.exports = {
   },
   "stories": [
     "../components/**/*.stories.tsx",
-    "../components/**/stories.tsx"
+    "../components/**/stories.tsx",
   ],
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/addon-docs",
     "storybook-addon-next"
 
   ],

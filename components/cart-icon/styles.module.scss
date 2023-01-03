@@ -6,6 +6,19 @@
   position: relative;
   width: fit-content;
   display: flex;
+  @include z-index('burger');
+  &.dark {
+    .badge {
+      color: $color-primary-700;
+      background-color: $color-primary-300;
+    }
+  }
+  &.light {
+    .badge {
+      color: $color-primary-200;
+      background-color: $color-primary-700;
+    }
+  }
 }
 
 .badge {
