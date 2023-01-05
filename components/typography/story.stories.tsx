@@ -1,7 +1,7 @@
 /* story for title component */
 import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
-import { Typography, Props, TypographyName } from './index'
+import { Typography, Props } from './index'
 export default {
   title: 'Atoms/Typography',
   component: Typography,
@@ -11,7 +11,7 @@ const Template: Story<Props> = (args: Props) => <Typography {...args} />
 
 export const HeadingXl = Template.bind({})
 HeadingXl.args = {
-  type: { name: TypographyName.HEADING, size: 'xl' },
+  type: { name: 'heading', size: 'xl' },
   children: 'Heading XL',
   as: 'h1',
 }
@@ -21,7 +21,7 @@ HeadingXl.parameters = {
 
 export const HeadingLg = Template.bind({})
 HeadingLg.args = {
-  type: { name: TypographyName.HEADING, size: 'lg' },
+  type: { name: 'heading', size: 'lg' },
   children: 'Heading LG',
   as: 'h2',
 }
@@ -31,7 +31,7 @@ HeadingLg.parameters = {
 
 export const HeadingMd = Template.bind({})
 HeadingMd.args = {
-  type: { name: TypographyName.HEADING, size: 'md' },
+  type: { name: 'heading', size: 'md' },
   children: 'Heading MD',
   as: 'h3',
 }
@@ -41,7 +41,7 @@ HeadingMd.parameters = {
 
 export const HeadingSm = Template.bind({})
 HeadingSm.args = {
-  type: { name: TypographyName.HEADING, size: 'sm' },
+  type: { name: 'heading', size: 'sm' },
   children: 'Heading SM',
   as: 'h4',
 }
@@ -51,7 +51,7 @@ HeadingSm.parameters = {
 
 export const HeadingXs = Template.bind({})
 HeadingXs.args = {
-  type: { name: TypographyName.HEADING, size: 'xs' },
+  type: { name: 'heading', size: 'xs' },
   children: 'Heading XS',
   as: 'h5',
 }
@@ -61,7 +61,7 @@ HeadingXs.parameters = {
 
 export const ParagraphXl = Template.bind({})
 ParagraphXl.args = {
-  type: { name: TypographyName.PARAGRAPH, size: 'xl' },
+  type: { name: 'paragraph', size: 'xl' },
   children: 'Paragraph XL',
   as: 'p',
 }
@@ -71,7 +71,7 @@ ParagraphXl.parameters = {
 
 export const ParagraphLg = Template.bind({})
 ParagraphLg.args = {
-  type: { name: TypographyName.PARAGRAPH, size: 'lg' },
+  type: { name: 'paragraph', size: 'lg' },
   children: 'Paragraph LG',
   as: 'p',
 }
@@ -81,7 +81,7 @@ ParagraphLg.parameters = {
 
 export const ParagraphMd = Template.bind({})
 ParagraphMd.args = {
-  type: { name: TypographyName.PARAGRAPH, size: 'md' },
+  type: { name: 'paragraph', size: 'md' },
   children: 'Paragraph MD',
   as: 'p',
 }
@@ -91,7 +91,7 @@ ParagraphMd.parameters = {
 
 export const ParagraphSm = Template.bind({})
 ParagraphSm.args = {
-  type: { name: TypographyName.PARAGRAPH, size: 'sm' },
+  type: { name: 'paragraph', size: 'sm' },
   children: 'Paragraph SM',
   as: 'p',
 }
@@ -101,7 +101,7 @@ ParagraphSm.parameters = {
 
 export const ParagraphXs = Template.bind({})
 ParagraphXs.args = {
-  type: { name: TypographyName.PARAGRAPH, size: 'xs' },
+  type: { name: 'paragraph', size: 'xs' },
   children: 'Paragraph XS',
   as: 'p',
 }
@@ -111,7 +111,7 @@ ParagraphXs.parameters = {
 
 export const Link = Template.bind({})
 Link.args = {
-  type: { name: TypographyName.LINK },
+  type: { name: 'link' },
   children: 'Link',
   as: 'span',
 }
@@ -121,7 +121,7 @@ Link.parameters = {
 
 export const Quote = Template.bind({})
 Quote.args = {
-  type: { name: TypographyName.QUOTE },
+  type: { name: 'quote' },
   children: 'Quote',
   as: 'span',
 }
@@ -131,7 +131,7 @@ Quote.parameters = {
 
 export const Button = Template.bind({})
 Button.args = {
-  type: { name: TypographyName.BUTTON },
+  type: { name: 'button' },
   children: 'Button',
   as: 'span',
 }
@@ -141,7 +141,7 @@ Button.parameters = {
 
 export const SectionTitle = Template.bind({})
 SectionTitle.args = {
-  type: { name: TypographyName.SECTION_TITLE },
+  type: { name: 'section-title' },
   children: 'Section Title',
   as: 'h2',
 }

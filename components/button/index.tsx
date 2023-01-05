@@ -3,7 +3,6 @@ import s from './styles.module.scss'
 import cn from 'classnames'
 import Link from 'next/link'
 import { Typography } from '@components'
-import { TypographyName } from '@components/typography'
 
 export type Props = {
   children?: ReactNode
@@ -24,7 +23,7 @@ const Content = ({ children }: { children: ReactNode }) => {
     <div className={s.text}>
       <Typography
         type={{
-          name: TypographyName.BUTTON,
+          name: 'button',
         }}
         as="span"
       >

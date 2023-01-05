@@ -7,14 +7,14 @@ export interface Props extends HTMLAttributes<HTMLOrSVGElement> {
   type?: TypographyType
 }
 
-export enum TypographyName {
-  HEADING = 'heading',
-  PARAGRAPH = 'paragraph',
-  LINK = 'link',
-  QUOTE = 'quote',
-  BUTTON = 'button',
-  SECTION_TITLE = 'section-title',
-}
+const TypographyName = [
+  'heading',
+  'paragraph',
+  'link',
+  'quote',
+  'button',
+  'section-title',
+] as const
 
 type TypographyTag =
   | 'h1'
@@ -30,29 +30,29 @@ type TypographySize = 'xl' | 'lg' | 'md' | 'sm' | 'xs'
 type TypographySizeExtended = TypographySize | 'xxl' | 'xxs'
 
 type TypographyTypeHeading = {
-  name: TypographyName.HEADING
+  name: 'heading'
   size: TypographySizeExtended
 }
 
 type TypographyTypeParagraph = {
-  name: TypographyName.PARAGRAPH
+  name: 'paragraph'
   size: TypographySize
 }
 
 type TypographyTypeLink = {
-  name: TypographyName.LINK
+  name: 'link'
 }
 
 type TypographyTypeCaption = {
-  name: TypographyName.QUOTE
+  name: 'caption'
 }
 
 type TypographyTypeButton = {
-  name: TypographyName.BUTTON
+  name: 'button'
 }
 
 type TypographyTypeSectionTitle = {
-  name: TypographyName.SECTION_TITLE
+  name: 'section-title'
 }
 
 type TypographyType =
@@ -66,15 +66,12 @@ type TypographyType =
 function hasSizeProperty(
   type: TypographyType
 ): type is TypographyTypeHeading | TypographyTypeParagraph {
-  return (
-    type.name === TypographyName.HEADING ||
-    type.name === TypographyName.PARAGRAPH
-  )
+  return type.name === 'heading' || type.name === 'paragraph'
 }
 
 export const Typography: FC<Props> = ({
   type = {
-    name: TypographyName.PARAGRAPH,
+    name: 'paragraph',
     size: 'md',
   },
   as: Tag = 'p',
