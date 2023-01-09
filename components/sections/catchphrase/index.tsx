@@ -1,7 +1,7 @@
 import React, { FC, useRef } from 'react'
 import s from './styles.module.scss'
 import { motion, useInView } from 'framer-motion'
-import { SectionTitle, Typography } from '@components'
+import { SectionSubtitle, Typography } from '@components'
 
 export type Props = {
   title: string
@@ -14,7 +14,7 @@ export const Catchphrase: FC<Props> = ({ title, children }) => {
   return (
     <motion.div className={s.container} ref={ref}>
       <div className={s.title}>
-        <SectionTitle text={title} />
+        <SectionSubtitle text={title} />
       </div>
       <motion.div
         className={s.content}
