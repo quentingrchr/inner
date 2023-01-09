@@ -14,7 +14,7 @@ export const TypographyName = [
   'link',
   'quote',
   'button',
-  'section-title',
+  'section-subtitle',
 ] as const
 
 type TypographyTag =
@@ -52,8 +52,8 @@ type TypographyTypeButton = {
   name: 'button'
 }
 
-type TypographyTypeSectionTitle = {
-  name: 'section-title'
+type TypographyTypeSectionSubtitle = {
+  name: 'section-subtitle'
 }
 
 type TypographyTypeQuote = {
@@ -66,7 +66,7 @@ type TypographyType =
   | TypographyTypeLink
   | TypographyTypeCaption
   | TypographyTypeButton
-  | TypographyTypeSectionTitle
+  | TypographyTypeSectionSubtitle
   | TypographyTypeQuote
 
 function hasSizeProperty(

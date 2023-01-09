@@ -125,7 +125,7 @@ Button.args = {
 
 export const SectionTitle = Template.bind({})
 SectionTitle.args = {
-  type: { name: 'section-title' },
+  type: { name: 'section-subtitle' },
   children: 'Section Title',
   as: 'h2',
 }

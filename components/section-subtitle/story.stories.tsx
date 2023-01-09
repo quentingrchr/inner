@@ -1,10 +1,10 @@
 /* story for title component */
 import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
-import { SectionTitle, Props } from './index'
+import { SectionSubtitle, Props } from './index'
 export default {
   title: 'Molecules/SectionTitle',
-  component: SectionTitle,
+  component: SectionSubtitle,
   argTypes: {
     text: {
       control: {
@@ -15,11 +15,11 @@ export default {
   parameters: {
     layout: 'centered',
   },
-} as ComponentMeta<typeof SectionTitle>
+} as ComponentMeta<typeof SectionSubtitle>
 
-const Template: Story<Props> = (args: Props) => <SectionTitle {...args} />
+const Template: Story<Props> = (args: Props) => <SectionSubtitle {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  text: 'Section Title',
+  text: 'Section Subtitle',
 }

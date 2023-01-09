@@ -7,10 +7,10 @@ export type Props = {
   text: string
 }
 
-export const SectionTitle: FC<Props> = ({ text }) => {
+export const SectionSubtitle: FC<Props> = ({ text }) => {
   return (
     <div className={s.container}>
-      <Typography type={{ name: 'section-title' }} as="h2">
+      <Typography type={{ name: 'section-subtitle' }} as="h2">
         {text}
       </Typography>
     </div>

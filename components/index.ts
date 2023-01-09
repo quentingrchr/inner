@@ -13,8 +13,9 @@ import { BurgerIcon } from './burger-icon'
 import { NavigationMenu } from './navigation-menu'
 import { SocialIcon } from './social-icon'
 import { LogoIcon } from './logo-icon'
-import { SectionTitle } from './section-title'
+import { SectionSubtitle } from './section-subtitle'
 import { Catchphrase } from './sections/catchphrase'
+import { Service } from './sections/service'
 
 export {
   Typography,
@@ -28,6 +29,6 @@ export {
   NavigationMenu,
   SocialIcon,
   LogoIcon,
-  SectionTitle,
+  SectionSubtitle,
   Catchphrase,
 }
