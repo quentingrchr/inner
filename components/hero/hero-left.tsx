@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import s from './styles.module.scss'
 import { motion } from 'framer-motion'
-import { Button, SectionTitle } from '@components'
+import { Button, SectionSubtitle } from '@components'
 
 export type Props = {
   animationDelay?: number
@@ -45,7 +45,7 @@ export const HeroLeft: FC<Props> = ({ animationDelay = 0 }) => {
   return (
     <div className={s.heroContent__left}>
       <motion.div className={s.heroContent__address} variants={buttonsVariants}>
-        <SectionTitle text="Los Angeles, CA" />
+        <SectionSubtitle text="Los Angeles, CA" />
       </motion.div>
       <motion.h1 className={s.heroContent__title} variants={titleVariants}>
         <motion.div className={s.heroContent__word} variants={wordVariants}>
