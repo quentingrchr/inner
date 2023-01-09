@@ -1,5 +1,11 @@
 @import '@styles/theme.scss';
 
+.base {
+  em {
+    font-style: italic;
+  }
+}
+
 /* headings */
 .heading-xxl {
   @include typo-heading('xxl');

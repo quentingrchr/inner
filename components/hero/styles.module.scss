@@ -2,7 +2,9 @@
 
 // Your style here
 .heroContainer {
-  margin: 0 var(--padding-page-x);
+  @include padding-page;
+  padding-top: var(--padding-section-y);
+  padding-bottom: var(--padding-section-y);
 }
 .heroContent {
   display: flex;

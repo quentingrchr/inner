@@ -1,0 +1,14 @@
+@import '@styles/theme.scss';
+
+// Your style here
+
+.container {
+  @include padding-page;
+  padding-top: var(--padding-section-y);
+  padding-bottom: var(--padding-section-y);
+}
+.title {
+  float: left;
+  padding-top: 4px;
+  padding-right: max(18vw, 10rem);
+}

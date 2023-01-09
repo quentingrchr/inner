@@ -37,11 +37,11 @@
 }
 
 $fs-heading: (
-  'xxl': 3.8rem,
-  'xl': 3.2rem,
-  'lg': 2.4rem,
-  'md': 1.8rem,
-  'sm': 1.8rem,
+  'xxl': 6.4rem,
+  'xl': 4.8rem,
+  'lg': 4rem,
+  'md': 3.2rem,
+  'sm': 2.4rem,
   'xs': 1.4rem,
   'xxs': 1.2rem,
 );
@@ -57,6 +57,7 @@ $fs-heading: (
     font-size: map-get($fs-heading, $type);
     font-family: $font-primary;
     font-weight: 400;
+    line-height: 1.1;
   } @else {
     @warn 'Invalid heading type: #{$type}.';
   }
@@ -137,4 +138,8 @@ $fs-paragraph: (
   } @else {
     @warn 'Invalid z-index: #{$z-index}.';
   }
+}
+
+@mixin padding-page {
+  margin: 0 var(--padding-page-x);
 }

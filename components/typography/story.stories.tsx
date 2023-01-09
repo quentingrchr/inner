@@ -1,12 +1,32 @@
 /* story for title component */
 import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
-import { Typography, Props } from './index'
+import { Typography, Props, TypographyName } from './index'
 export default {
   title: 'Atoms/Typography',
   component: Typography,
   parameters: {
     layout: 'centered',
+  },
+  argTypes: {
+    type: {
+      /* add documentation for type prop */
+      /* q: what's the character to add breakline ? */
+      /* a: use ` */
+
+      description: `Type of typography`,
+      table: {
+        type: {
+          summary: 'TypographyType',
+          detail: `{\n  name: ${Object.values(TypographyName).join(
+            ' | '
+          )} \n size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'\n}`,
+        },
+        control: {
+          type: 'select',
+        },
+      },
+    },
   },
 } as ComponentMeta<typeof Typography>
 

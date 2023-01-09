@@ -6,6 +6,7 @@
   --color-bg: #{$color-primary-200};
   --color-text: #{$color-primary-600};
   --padding-page-x: 10vh;
+  --padding-section-y: #{$padding-section-y};
   display: flex;
   flex-direction: column;
   min-height: 200vh;

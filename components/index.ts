@@ -14,6 +14,7 @@ import { NavigationMenu } from './navigation-menu'
 import { SocialIcon } from './social-icon'
 import { LogoIcon } from './logo-icon'
 import { SectionTitle } from './section-title'
+import { Catchphrase } from './sections/catchphrase'
 
 export {
   Typography,
@@ -28,4 +29,5 @@ export {
   SocialIcon,
   LogoIcon,
   SectionTitle,
+  Catchphrase,
 }

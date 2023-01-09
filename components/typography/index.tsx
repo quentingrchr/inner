@@ -1,13 +1,14 @@
-import React, { ElementType, HTMLAttributes, FC } from 'react'
+import React, { ElementType, HTMLAttributes, FC, CSSProperties } from 'react'
 import s from './styles.module.scss'
 import cn from 'classnames'
 
 export interface Props extends HTMLAttributes<HTMLOrSVGElement> {
   as?: TypographyTag
   type?: TypographyType
+  style?: CSSProperties
 }
 
-const TypographyName = [
+export const TypographyName = [
   'heading',
   'paragraph',
   'link',
@@ -55,6 +56,10 @@ type TypographyTypeSectionTitle = {
   name: 'section-title'
 }
 
+type TypographyTypeQuote = {
+  name: 'quote'
+}
+
 type TypographyType =
   | TypographyTypeHeading
   | TypographyTypeParagraph
@@ -62,6 +67,7 @@ type TypographyType =
   | TypographyTypeCaption
   | TypographyTypeButton
   | TypographyTypeSectionTitle
+  | TypographyTypeQuote
 
 function hasSizeProperty(
   type: TypographyType
@@ -76,10 +82,19 @@ export const Typography: FC<Props> = ({
   },
   as: Tag = 'p',
   children,
+  style,
 }) => {
   if (hasSizeProperty(type)) {
-    return <Tag className={cn(s[`${type.name}-${type.size}`])}>{children}</Tag>
+    return (
+      <Tag className={cn(s[`${type.name}-${type.size}`], s.base)} style={style}>
+        {children}
+      </Tag>
+    )
   } else {
-    return <Tag className={cn(s[type.name])}>{children}</Tag>
+    return (
+      <Tag className={cn(s[type.name], s.base)} style={style}>
+        {children}
+      </Tag>
+    )
   }
 }
