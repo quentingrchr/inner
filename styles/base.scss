@@ -1,6 +1,15 @@
 @import '@styles/theme.scss';
 
+:root {
+  --color-bg: #{$color-primary-200};
+  --color-text: #{$color-primary-600};
+  --padding-page-x: 10vh;
+  --padding-section-y: #{$padding-section-y};
+}
+
 html,
 body {
   font-size: 10px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
