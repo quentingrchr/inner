@@ -4,13 +4,14 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { Typography } from '@components'
 
+type ButtonType = 'button' | 'submit' | 'reset'
 export type Props = {
   children?: ReactNode
   onClick?: () => void
   to?: string
   variant: 'primary' | 'secondary'
   color: 'light' | 'dark'
-  type?: 'button' | 'submit' | 'reset' | 'link'
+  type?: ButtonType
   disabled?: boolean
 }
 
@@ -33,15 +34,16 @@ const Content = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export const Button: FC<Props> = ({
-  onClick,
-  children,
-  to,
-  type = 'button',
-  color = 'dark',
-  variant = 'primary',
-  disabled = false,
-}) => {
+export const Button: FC<Props> = (props) => {
+  const {
+    onClick,
+    children,
+    to,
+    type = 'button',
+    color = 'dark',
+    variant = 'primary',
+    disabled = false,
+  } = props
   if (onClick !== undefined) {
     return (
       <button
