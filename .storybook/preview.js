@@ -6,6 +6,19 @@ import "../styles/base.scss"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: {
+    default: 'light',
+    values: [
+      {
+        name: 'light',
+        value: '#f9f1ec'
+      },
+      {
+        name: 'dark',
+        value: '#4c4037'
+      }
+    ]
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
