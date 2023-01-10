@@ -119,6 +119,7 @@ $fs-paragraph: (
     font-size: map-get($fs-paragraph, $size);
     font-family: $font-secondary;
     font-weight: 300;
+    line-height: 1.5;
   } @else {
     @warn 'Invalid paragraph size: #{$size}.';
   }
@@ -142,4 +143,9 @@ $fs-paragraph: (
 
 @mixin padding-page {
   margin: 0 var(--padding-page-x);
+}
+
+@mixin padding-section {
+  padding-top: var(--padding-section-y);
+  padding-bottom: var(--padding-section-y);
 }

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Story, ComponentMeta } from '@storybook/react'
 import { Catchphrase, Props } from './index'
 export default {
-  title: 'Organisms/SectionCatchphrase',
+  title: 'Organisms/Sections/Catchphrase',
   component: Catchphrase,
   argTypes: {
     title: {

@@ -10,9 +10,9 @@ export type Props = {
 
 export const Catchphrase: FC<Props> = ({ title, children }) => {
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { margin: '-50%' })
+  const isInView = useInView(ref, { margin: '-50%', once: true })
   return (
-    <motion.div className={s.container} ref={ref}>
+    <motion.section className={s.container} ref={ref}>
       <div className={s.title}>
         <SectionSubtitle text={title} />
       </div>
@@ -44,6 +44,6 @@ export const Catchphrase: FC<Props> = ({ title, children }) => {
           {children}
         </Typography>
       </motion.div>
-    </motion.div>
+    </motion.section>
   )
 }

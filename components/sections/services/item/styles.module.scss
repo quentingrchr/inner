@@ -1,0 +1,30 @@
+@import '@styles/theme.scss';
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.serviceHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--color-text);
+  gap: 1rem;
+}
+
+.serviceNumber {
+  @include typo-section-subtitle;
+}
+
+.serviceTitle {
+}
+
+.serviceBody {
+  --color-text: #{$color-primary-500};
+  color: var(--color-text);
+}

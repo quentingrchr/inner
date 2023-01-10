@@ -4,8 +4,7 @@
 
 .container {
   @include padding-page;
-  padding-top: var(--padding-section-y);
-  padding-bottom: var(--padding-section-y);
+  @include padding-section;
 }
 .title {
   float: left;

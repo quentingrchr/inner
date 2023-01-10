@@ -1,0 +1,30 @@
+@import '@styles/theme.scss';
+
+// Your style here
+.container {
+  @include padding-page;
+  @include padding-section;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  margin-top: 3rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+}
+.itemWrapper {
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}

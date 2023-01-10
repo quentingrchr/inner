@@ -8,11 +8,15 @@ export type Props = {}
 
 export const Hero: FC<Props> = (props: Props) => {
   return (
-    <motion.div className={s.heroContainer} initial="initial" animate="animate">
+    <motion.section
+      className={s.heroContainer}
+      initial="initial"
+      animate="animate"
+    >
       <div className={s.heroContent}>
         <HeroLeft animationDelay={0.5} />
         <HeroRight />
       </div>
-    </motion.div>
+    </motion.section>
   )
 }

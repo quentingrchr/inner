@@ -3,8 +3,7 @@
 // Your style here
 .heroContainer {
   @include padding-page;
-  padding-top: var(--padding-section-y);
-  padding-bottom: var(--padding-section-y);
+  @include padding-section;
 }
 .heroContent {
   display: flex;
